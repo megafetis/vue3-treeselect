@@ -24,7 +24,7 @@ Breaking changes from his library:
 - Supports a wide range of browsers (see [below](#browser-compatibility))
 - RTL support
 
-*Requires Vue 2.2+*
+*Requires Vue 3.0+*
 
 ### Getting Started
 
