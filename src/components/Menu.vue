@@ -55,7 +55,7 @@
       if (instance.menu.isOpen) this.$nextTick(this.onMenuOpen)
     },
 
-    destroyed() {
+    unmounted() {
       this.onMenuClose()
     },
 

@@ -125,7 +125,7 @@
       )
     },
 
-    destroyed() {
+    unmounted() {
       this.removeHandlers()
     },
   }
@@ -143,7 +143,7 @@
       this.setup()
     },
 
-    destroyed() {
+    unmounted() {
       this.teardown()
     },
 

@@ -6450,7 +6450,7 @@ var instanceId = 0;
     if (this.alwaysOpen) this.openMenu();
     if (this.async && this.defaultOptions) this.handleRemoteSearch();
   },
-  destroyed: function destroyed() {
+  unmounted: function unmounted() {
     // istanbul ignore next
     this.toggleClickOutsideEvent(false);
   }
@@ -7823,7 +7823,7 @@ var directionMap = {
     var instance = this.instance;
     if (instance.menu.isOpen) this.$nextTick(this.onMenuOpen);
   },
-  destroyed: function destroyed() {
+  unmounted: function unmounted() {
     this.onMenuClose();
   },
   methods: {
@@ -8188,7 +8188,7 @@ var PortalTarget = {
       "ref": "menu"
     }, null)]);
   },
-  destroyed: function destroyed() {
+  unmounted: function unmounted() {
     this.removeHandlers();
   }
 };
@@ -8201,7 +8201,7 @@ var placeholder;
   mounted: function mounted() {
     this.setup();
   },
-  destroyed: function destroyed() {
+  unmounted: function unmounted() {
     this.teardown();
   },
   methods: {
