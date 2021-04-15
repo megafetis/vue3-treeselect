@@ -34,22 +34,15 @@
     },
 
     render() {
-      const { renderValueContainer } = this.$parent
-      // const transitionGroupProps = {
-      //   props: {
-      //     tag: 'div',
-      //     name: 'vue-treeselect__multi-value-item--transition',
-      //     appear: true,
-      //   },
-      // }
-
-      return renderValueContainer(
-        <transition-group class="vue-treeselect__multi-value" tag="div" name="vue-treeselect__multi-value-item--transition" appear={true} >
-          {this.renderMultiValueItems()}
-          {this.renderExceedLimitTip()}
-          <Placeholder key="placeholder" />
-          <Input ref="input" key="input" />
-        </transition-group>,
+      return (
+        <div class="vue-treeselect__value-container">
+          <transition-group class="vue-treeselect__multi-value" tag="div" name="vue-treeselect__multi-value-item--transition" appear={true} >
+            {this.renderMultiValueItems()}
+            {this.renderExceedLimitTip()}
+            <Placeholder key="placeholder" />
+            <Input ref="input" key="input" />
+          </transition-group>
+        </div>
       )
     },
   }

@@ -17,18 +17,23 @@
       },
     },
     render() {
-      const { instance, $parent: { renderValueContainer } } = this
+      const { instance } = this
       const shouldShowValue = instance.hasValue && !instance.trigger.searchQuery
 
-      return renderValueContainer([
-        shouldShowValue && (
-          <div class="vue-treeselect__single-value">
-            { this.renderSingleValueLabel() }
-          </div>
-        ),
-        <Placeholder />,
-        <Input ref="input" />,
-      ])
+      return (
+        <div class="vue-treeselect__value-container">
+        
+          {[
+            shouldShowValue && (
+              <div class="vue-treeselect__single-value">
+                { this.renderSingleValueLabel() }
+              </div>
+            ),
+            <Placeholder />,
+            <Input ref="input" />,
+          ]}
+        </div>
+      )
     },
   }
 </script>

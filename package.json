@@ -1,12 +1,12 @@
 {
   "name": "vue3-treeselect",
-  "version": "0.1.1",
+  "version": "0.1.11",
   "description": "Tree select hierarchical component for vue 3 (next)",
   "main": "dist/vue3-treeselect.common.js",
   "unpkg": "dist/vue3-treeselect.umd.js",
   "author": "megafetis",
   "scripts": {
-    "build": "vue-cli-service build --target lib --name vue3-treeselect ./src/index.js && webpack --env.production",
+    "build": "vue-cli-service build --target lib --name vue3-treeselect ./src/index.js && vue-cli-service build --dest docs --mode development ./demo/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {

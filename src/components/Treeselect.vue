@@ -14,7 +14,7 @@
   import Menu from './Menu'
   import MenuPortal from './MenuPortal'
 
-  import {defineComponent,h} from 'vue';
+  import {defineComponent} from 'vue';
   export default defineComponent({
     name: 'vue-treeselect',
     mixins: [ treeselectMixin ],

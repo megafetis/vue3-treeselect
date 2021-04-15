@@ -28,7 +28,6 @@
 
     mounted() {
       const { instance } = this
-
       if (instance.menu.isOpen) this.setupHandlers()
     },
 

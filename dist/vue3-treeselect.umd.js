@@ -4103,9 +4103,9 @@ if (typeof window !== 'undefined') {
 // EXTERNAL MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
 var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__("8bbf");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader-v16/dist/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader-v16/dist??ref--0-1!./src/components/Treeselect.vue?vue&type=template&id=4fa337e8
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader-v16/dist/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader-v16/dist??ref--0-1!./src/components/Treeselect.vue?vue&type=template&id=5905dd6c
 
-function Treeselectvue_type_template_id_4fa337e8_render(_ctx, _cache, $props, $setup, $data, $options) {
+function Treeselectvue_type_template_id_5905dd6c_render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_HiddenFields = Object(external_commonjs_vue_commonjs2_vue_root_Vue_["resolveComponent"])("HiddenFields");
 
   var _component_Control = Object(external_commonjs_vue_commonjs2_vue_root_Vue_["resolveComponent"])("Control");
@@ -6904,14 +6904,15 @@ var keysThatRequireMenuBeingOpen = [KEY_CODES.ENTER, KEY_CODES.END, KEY_CODES.HO
   },
   render: function render() {
     var h = arguments[0];
-    var instance = this.instance,
-        renderValueContainer = this.$parent.renderValueContainer;
+    var instance = this.instance;
     var shouldShowValue = instance.hasValue && !instance.trigger.searchQuery;
-    return renderValueContainer([shouldShowValue && Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createVNode"])("div", {
+    return Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createVNode"])("div", {
+      "class": "vue-treeselect__value-container"
+    }, [[shouldShowValue && Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createVNode"])("div", {
       "class": "vue-treeselect__single-value"
     }, [this.renderSingleValueLabel()]), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createVNode"])(Placeholder, null, null), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createVNode"])(Input, {
       "ref": "input"
-    }, null)]);
+    }, null)]]);
   }
 });
 // CONCATENATED MODULE: ./src/components/SingleValue.vue
@@ -7046,15 +7047,9 @@ function MultiValueItemvue_type_script_lang_js_isSlot(s) {
     var _this = this;
 
     var h = arguments[0];
-    var renderValueContainer = this.$parent.renderValueContainer; // const transitionGroupProps = {
-    //   props: {
-    //     tag: 'div',
-    //     name: 'vue-treeselect__multi-value-item--transition',
-    //     appear: true,
-    //   },
-    // }
-
-    return renderValueContainer(Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createVNode"])(Object(external_commonjs_vue_commonjs2_vue_root_Vue_["resolveComponent"])("transition-group"), {
+    return Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createVNode"])("div", {
+      "class": "vue-treeselect__value-container"
+    }, [Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createVNode"])(Object(external_commonjs_vue_commonjs2_vue_root_Vue_["resolveComponent"])("transition-group"), {
       "class": "vue-treeselect__multi-value",
       "tag": "div",
       "name": "vue-treeselect__multi-value-item--transition",
@@ -7068,7 +7063,7 @@ function MultiValueItemvue_type_script_lang_js_isSlot(s) {
           "key": "input"
         }, null)];
       }
-    }));
+    })]);
   }
 });
 // CONCATENATED MODULE: ./src/components/MultiValue.vue
@@ -7108,14 +7103,6 @@ Arrowvue_type_script_lang_js.render = Arrowvue_type_template_id_5d5151cb_render
 
 
 
-
-
-
-
-
-function Controlvue_type_script_lang_js_isSlot(s) {
-  return typeof s === 'function' || Object.prototype.toString.call(s) === '[object Object]' && !Object(external_commonjs_vue_commonjs2_vue_root_Vue_["isVNode"])(s);
-}
 
 /* harmony default export */ var Controlvue_type_script_lang_js = ({
   name: 'vue-treeselect--control',
@@ -7224,18 +7211,7 @@ function Controlvue_type_script_lang_js_isSlot(s) {
 
       instance.focusInput();
       instance.toggleMenu();
-    }),
-    // This is meant to be called by child `<Value />` component.
-    renderValueContainer: function renderValueContainer(children) {
-      var h = this.$createElement;
-      return Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createVNode"])("div", {
-        "class": "vue-treeselect__value-container"
-      }, Controlvue_type_script_lang_js_isSlot(children) ? children : {
-        default: function _default() {
-          return [children];
-        }
-      });
-    }
+    })
   },
   render: function render() {
     var h = arguments[0];
@@ -7452,7 +7428,7 @@ function setupResizeAndScrollEventListeners($el, listener) {
       required: true
     }
   },
-  render: function render(context) {
+  render: function render() {
     var h = arguments[0];
     var type = this.type,
         icon = this.icon;
@@ -8198,14 +8174,12 @@ var placeholder;
   created: function created() {
     this.portalTarget = null;
   },
-  mounted: function mounted() {
-    this.setup();
+  mounted: function mounted() {//this.setupEl()
   },
-  unmounted: function unmounted() {
-    this.teardown();
+  unmounted: function unmounted() {//this.teardown()
   },
   methods: {
-    setup: function setup() {
+    setupEl: function setupEl() {
       var el = document.createElement('div');
       document.body.appendChild(el);
       this.portalTarget = Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createApp"])(_objectSpread2({
@@ -8285,7 +8259,7 @@ var placeholder;
 
 
 
-Treeselectvue_type_script_lang_js.render = Treeselectvue_type_template_id_4fa337e8_render
+Treeselectvue_type_script_lang_js.render = Treeselectvue_type_template_id_5905dd6c_render
 
 /* harmony default export */ var Treeselect = (Treeselectvue_type_script_lang_js);
 // EXTERNAL MODULE: ./styles/style.less

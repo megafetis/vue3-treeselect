@@ -127,14 +127,6 @@
         instance.toggleMenu()
       }),
 
-      // This is meant to be called by child `<Value />` component.
-      renderValueContainer(children) {
-        return (
-          <div class="vue-treeselect__value-container">
-            {children}
-          </div>
-        )
-      },
     },
 
     render() {

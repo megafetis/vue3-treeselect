@@ -15,7 +15,7 @@
       },
     },
 
-    render(context) {
+    render() {
       const { type,icon } = this
 
       return (
